@@ -1,3 +1,5 @@
+let g:clear_background=1
+
 function! s:get_highlight_colors(group)
     redir => highlight
     silent execute 'silent highlight ' . a:group
@@ -31,10 +33,25 @@ function! s:clear_bg(group)
 endfunction
 
 function! background#clear_background()
-    for group in ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
-                \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
-                \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
-                \'LineNr']
-        call s:clear_bg(group)
-    endfor
+    if g:clear_background
+        for group in ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+                    \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+                    \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+                    \'LineNr']
+            call s:clear_bg(group)
+        endfor
+    endif
 endfunction
+
+function! s:disable()
+    let g:clear_background=0
+    execute 'colorscheme ' . g:colors_name
+endfunction
+
+function! s:enable()
+    let g:clear_background=1
+    execute 'colorscheme ' . g:colors_name
+endfunction
+
+command! -nargs=0 -bar TransparentDisable call s:disable()
+command! -nargs=0 -bar TransparentEnable call s:enable()
