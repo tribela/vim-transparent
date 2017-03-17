@@ -43,15 +43,12 @@ function! background#clear_background()
     endif
 endfunction
 
-function! s:disable()
+function! background#disable()
     let g:clear_background=0
     execute 'colorscheme ' . g:colors_name
 endfunction
 
-function! s:enable()
+function! background#enable()
     let g:clear_background=1
     execute 'colorscheme ' . g:colors_name
 endfunction
-
-command! -nargs=0 -bar TransparentDisable call s:disable()
-command! -nargs=0 -bar TransparentEnable call s:enable()
