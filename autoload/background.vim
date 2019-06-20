@@ -29,7 +29,7 @@ endfunction
 function! s:clear_bg(group)
     let [term_attr, gui_attr, ctermfg, guifg] = s:get_highlight_colors(a:group)
 
-    execute 'hi ' . a:group . ' term=' . term_attr . ' ctermbg=none ctermfg=' . ctermfg
+    execute 'hi ' . a:group . ' term=' . term_attr . ' ctermfg=' . ctermfg . ' ctermbg=NONE guibg=NONE'
 endfunction
 
 function! background#clear_background()
