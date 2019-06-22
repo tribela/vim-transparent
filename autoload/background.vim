@@ -7,7 +7,7 @@ function! s:get_highlight_colors(group)
 
     let link_matches = matchlist(highlight, 'links to \(\S\+\)')
     if len(link_matches) > 0
-        return s:get_highlight_colors(link_matches[1])
+        return 'LINKED'
     endif
 
     let term_attr = s:match_highlight(highlight, 'term=\(\S\+\)')
@@ -27,7 +27,12 @@ function! s:match_highlight(highlight, pattern)
 endfunction
 
 function! s:clear_bg(group)
-    let [term_attr, gui_attr, ctermfg, guifg] = s:get_highlight_colors(a:group)
+    let highlights = s:get_highlight_colors(a:group)
+    if type(highlights) == v:t_string && highlights == 'LINKED'
+        return
+    endif
+
+    let [term_attr, gui_attr, ctermfg, guifg] = highlights
 
     execute 'hi ' . a:group . ' term=' . term_attr . ' ctermfg=' . ctermfg .  ' guifg=' . guifg .' ctermbg=NONE guibg=NONE'
 endfunction
