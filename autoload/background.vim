@@ -57,3 +57,8 @@ function! background#enable()
     let g:clear_background=1
     execute 'colorscheme ' . g:colors_name
 endfunction
+
+function! background#toggle()
+    let g:clear_background=!g:clear_background
+    execute 'colorscheme ' . g:colors_name
+endfunction
