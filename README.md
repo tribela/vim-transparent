@@ -22,7 +22,7 @@ With vim-transparent
 I recommend to use [Vim-Plug][] to manage plugins.
 
 ```vimrc
-Plug 'kjwon15/vim-transparent'
+Plug 'tribela/vim-transparent'
 ```
 
 [Vim-Plug]: https://github.com/junegunn/vim-plug
