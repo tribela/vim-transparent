@@ -39,12 +39,13 @@ endfunction
 
 function! background#clear_background()
     if g:clear_background
-        for group in ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
-                    \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
-                    \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
-                    \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+        for group in g:transparent_groups
             call s:clear_bg(group)
         endfor
+        if exists("g:transparent_my_tp")
+            let MyTp = function(g:transparent_my_tp)
+            call MyTp()
+        endif
     endif
 endfunction
 
