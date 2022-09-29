@@ -39,6 +39,13 @@ endfunction
 
 function! background#clear_background()
     if g:clear_background
+        if !exists('g:transparent_groups')
+            let g:transparent_groups = 
+                        \['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+                        \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
+                        \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
+                        \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+        endif
         for group in g:transparent_groups
             call s:clear_bg(group)
         endfor
