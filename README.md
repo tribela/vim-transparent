@@ -33,23 +33,19 @@ Plug 'tribela/vim-transparent'
 ### Minimal configuration
 
 ```vim
+" zplug
 Plug 'tribela/vim-transparent'
 
+" Clear the background of highlight groups in g:transparent_groups.
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
                             \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                             \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
                             \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
-
-" `background#clear_background()` will call the function of which name is saved in `g:transparent_my_tp`
-"let g:transparent_my_tp = 'MyTransparent'
-"function! MyTransparent()
-"    " CursorLine
-"    "hi CursorLine ctermfg=NONE ctermbg=239 guibg=NONE guibg=#4e4e4e
-"    "...
-"endfunction
 ```
 
 ### Advanced configuration
+
+The bad thing is something in vim may be not transparent, If you use vim plugins. You can use `:filter /<pattern>/ hi` to find the highlight groups e.g. `:filter /CocList/ hi`, and change it.
 
 For example, I use these plugins, [coc.nvim](https://github.com/neoclide/coc.nvim), [lightline](https://github.com/itchyny/lightline.vim), [rnvimr](https://github.com/kevinhwang91/rnvimr), [fzf.vim](https://github.com/junegunn/fzf), [vim-deus](https://github.com/ajmwagar/vim-deus).
 
@@ -65,18 +61,15 @@ let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identif
 let g:transparent_groups += ['Pmenu']
 
 " coc.nvim
-" You can use `:filter /<pattern>/ hi` to find the group. e.g. `:filter /CocList/ hi`.
 let g:transparent_groups += ['NormalFloat', 'CocFloating']
 
-" fzf.vim
-":echo g:fzf_colors
-"let $FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS .. ' --color=gutter:-1'
+augroup transparent
+    autocmd VimEnter,ColorScheme * call MyTransparent()
+augroup END
 
-" Rnvimr
-":hi RnvimrNormal
-
-let g:transparent_my_tp = 'MyTransparent'
 function! MyTransparent()
+    " Customize the highlight groups for transparency in here.
+
     " CursorLine
     "hi CursorLine ctermfg=NONE ctermbg=239 guibg=NONE guibg=#4e4e4e
 
@@ -152,6 +145,23 @@ endfunction
 let g:lightline = {
       "\ 'colorscheme': 'deus',
       \ }
+```
+
+Rnvimr:
+
+```vim
+" Rnvimr background
+":hi RnvimrNormal
+" show draw border
+let g:rnvimr_draw_border = 1
+```
+
+fzf.vim:
+
+```vim
+":echo g:fzf_colors
+" transparent the gutter
+let $FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS .. ' --color=gutter:-1'
 ```
 
 ### Images

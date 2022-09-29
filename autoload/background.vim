@@ -42,10 +42,6 @@ function! background#clear_background()
         for group in g:transparent_groups
             call s:clear_bg(group)
         endfor
-        if exists("g:transparent_my_tp")
-            let MyTp = function(g:transparent_my_tp)
-            call MyTp()
-        endif
     endif
 endfunction
 
