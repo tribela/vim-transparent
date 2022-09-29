@@ -30,18 +30,6 @@ Plug 'tribela/vim-transparent'
 
 ## Configuration
 
-### Minimal configuration
-
-```vim
-Plug 'tribela/vim-transparent'
-
-" Clear the background of highlight groups in g:transparent_groups.
-let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
-                            \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
-                            \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
-                            \ 'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
-```
-
 ### Advanced configuration
 
 The bad thing is something in vim may be not transparent, if you use vim plugins. You can use `:filter /<pattern>/ hi` to find the highlight groups e.g. `:filter /CocList/ hi`, and change it.
@@ -51,6 +39,7 @@ For example, I use these plugins, [coc.nvim](https://github.com/neoclide/coc.nvi
 ```vim
 Plug 'tribela/vim-transparent'
 
+" default
 let g:transparent_groups = ['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
                             \ 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                             \ 'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
