@@ -1,4 +1,6 @@
-let g:clear_background=1
+if !exists('g:clear_background')
+  let g:clear_background=1
+endif
 
 function! s:get_highlight_colors(group)
     redir => highlight
