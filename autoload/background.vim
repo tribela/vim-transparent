@@ -2,6 +2,10 @@ if !exists('g:clear_background')
   let g:clear_background=1
 endif
 
+if !exists('g:colors_name')
+  let g:colors_name='default'
+endif
+
 function! s:get_highlight_colors(group)
     redir => highlight
     silent execute 'silent highlight ' . a:group
