@@ -47,7 +47,7 @@ function! background#clear_background()
     if g:clear_background
         if !exists('g:transparent_groups')
             let g:transparent_groups = 
-                        \['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
+                        \['Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
                         \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                         \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
                         \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
