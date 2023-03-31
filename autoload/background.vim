@@ -50,7 +50,8 @@ function! background#clear_background()
                         \['Normal', 'Comment', 'Constant', 'Special', 'Identifier',
                         \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                         \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
-                        \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+                        \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+                        \'VertSplit']
             if has('nvim')
                 let g:transparent_groups += ['NormalNC']
             endif
