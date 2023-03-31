@@ -40,7 +40,11 @@ function! s:clear_bg(group)
 
     let [term_attr, gui_attr, ctermfg, guifg] = highlights
 
-    execute 'hi ' . a:group . ' term=' . term_attr . ' ctermfg=' . ctermfg .  ' guifg=' . guifg .' ctermbg=NONE guibg=NONE'
+    try
+        execute 'hi ' . a:group . ' term=' . term_attr . ' ctermfg=' . ctermfg .  ' guifg=' . guifg .' ctermbg=NONE guibg=NONE'
+    catch /E411/
+        " E411: Highlight group doesn't exist
+    endtry
 endfunction
 
 function! background#clear_background()
