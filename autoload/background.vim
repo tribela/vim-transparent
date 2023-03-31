@@ -51,19 +51,13 @@ function! background#clear_background()
                         \'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String',
                         \'Function', 'Conditional', 'Repeat', 'Operator', 'Structure',
                         \'LineNr', 'NonText', 'SignColumn', 'CursorLineNr', 'EndOfBuffer']
+            if has('nvim')
+                let g:transparent_groups += ['NormalNC']
+            endif
         endif
         for group in g:transparent_groups
             call s:clear_bg(group)
         endfor
-
-        if has('nvim')
-            if !exists('g:transparent_groups_nvim')
-                let g:transparent_groups_nvim = ['NormalNC']
-            endif
-            for group in g:transparent_groups_nvim
-                call s:clear_bg(group)
-            endfor
-        endif
     endif
 endfunction
 
