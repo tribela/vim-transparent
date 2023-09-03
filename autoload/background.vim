@@ -60,6 +60,9 @@ function! background#clear_background()
                 let g:transparent_groups += ['NormalNC']
             endif
         endif
+        if exists('g:transparent_groups_add')
+            let g:transparent_groups += g:transparent_groups_add
+        endif
         for group in g:transparent_groups
             call s:clear_bg(group)
         endfor

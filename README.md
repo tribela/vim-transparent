@@ -36,6 +36,8 @@ The bad thing is something in vim may be not transparent, if you use vim plugins
 
 For example, I use these plugins, [coc.nvim](https://github.com/neoclide/coc.nvim), [lightline](https://github.com/itchyny/lightline.vim), [rnvimr](https://github.com/kevinhwang91/rnvimr), [fzf.vim](https://github.com/junegunn/fzf), [vim-deus](https://github.com/ajmwagar/vim-deus).
 
+:bulb: You can also use `let g:transparent_groups_add` if you just want to add some groups, without overriding the defaults. 
+
 ```vim
 Plug 'tribela/vim-transparent'
 
