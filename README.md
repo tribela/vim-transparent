@@ -160,27 +160,21 @@ lightline and vim-deus:
 
 ![lightline-and-deus](https://github.com/tribela/vim-transparent/assets/5047683/dc49c12c-dce5-4f53-84bd-bf58ffdb0953)
 
-
 coc.nvim floating windows:
 
 ![coc-floating_windows](https://github.com/tribela/vim-transparent/assets/5047683/debb3c35-7b37-4fe5-a638-140081f1d245)
-
-
 
 coc.nvim CocList:
 
 ![coc-coclist](https://github.com/tribela/vim-transparent/assets/5047683/186e9b69-0caf-4390-b524-79ff82be7398)
 
-
 Rnvimr:
 
 ![rnvimr](https://github.com/tribela/vim-transparent/assets/5047683/6bd67138-875c-4791-b8da-a3d0609e2ccc)
 
-
 Pmenu:
 
 ![pmenu](https://github.com/tribela/vim-transparent/assets/5047683/0f8b36d6-13b9-4eba-a620-6b1334e70be0)
-
 
 ## Usage
 
