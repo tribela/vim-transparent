@@ -5,16 +5,16 @@ If you love transparent term, but your favourite vim color scheme doesn't
 
 # Screenshots
 
-Without vim-transparent (example color scheme is [PaperColor][])
+Without vim-transparent (example color scheme is [eva01][])
 
-![papercolor without transparent](https://github.com/kjwon15/vim-transparent/raw/master/img/papercolor-without-transparent.png)
+![eva01 without transparent](https://github.com/tribela/vim-transparent/assets/5047683/09e18e7f-7a01-4b3b-a11a-021d53a36fe7)
 
 With vim-transparent
 
-![papercolor with transparent](https://github.com/kjwon15/vim-transparent/raw/master/img/papercolor-with-transparent.png)
+![eva01 with transparent](https://github.com/tribela/vim-transparent/assets/5047683/b72cb2ba-60b9-4348-84d3-f91c35cffe3c)
 
 
-[PaperColor]: https://github.com/NLKNguyen/papercolor-theme
+[eva01]: https://github.com/hachy/eva01.vim
 
 
 ## Installation
@@ -158,23 +158,23 @@ let $FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS .. ' --color=gutter:-1'
 
 lightline and vim-deus:
 
-![](./img/lightline-and-deus.png)
+![lightline-and-deus](https://github.com/tribela/vim-transparent/assets/5047683/dc49c12c-dce5-4f53-84bd-bf58ffdb0953)
 
 coc.nvim floating windows:
 
-![](./img/coc-floating_windows.png)
+![coc-floating_windows](https://github.com/tribela/vim-transparent/assets/5047683/debb3c35-7b37-4fe5-a638-140081f1d245)
 
 coc.nvim CocList:
 
-![](./img/coc-coclist.png)
+![coc-coclist](https://github.com/tribela/vim-transparent/assets/5047683/186e9b69-0caf-4390-b524-79ff82be7398)
 
 Rnvimr:
 
-![](./img/rnvimr.png)
+![rnvimr](https://github.com/tribela/vim-transparent/assets/5047683/6bd67138-875c-4791-b8da-a3d0609e2ccc)
 
 Pmenu:
 
-![](./img/pmenu.png)
+![pmenu](https://github.com/tribela/vim-transparent/assets/5047683/0f8b36d6-13b9-4eba-a620-6b1334e70be0)
 
 ## Usage
 
