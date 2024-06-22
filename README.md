@@ -2,6 +2,10 @@
 
 If you love transparent term, but your favourite vim color scheme doesn't
 
+If you use Neovim, See [transparent.nvim][]
+
+[transparent.nvim]: https://github.com/tribela/transparent.nvim
+
 
 # Screenshots
 
